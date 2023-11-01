@@ -2,7 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary-blue: #103a84;
+  --color-primary-red: #e62127;
+  --color-header: #f4f4f4;
+}
 
+.border-color-blue{
+  border-color: var(--color-primary-blue);
+}
+
+.background-color-header {
+  background-color: var(--color-header);
+  font-weight: 500;
+}
+
+.background-color-primary-red {
+  background-color: var(--color-primary-red);
+}
+
+.background-color-primary-blue {
+  background-color: var(--color-primary-blue);
+}
+
+.button-search:hover {
+  background-color: var(--color-primary-blue);
+}
+
+input:focus-visible, textarea:focus-visible {
+  outline: none;
+}
+
+.navlink {
+  transition: all 0.3s;
+}
+
+.navlink:hover {
+  color: white;
+  cursor: pointer;
+}
 
 /* width */
 ::-webkit-scrollbar {
