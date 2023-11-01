@@ -42,7 +42,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="">
+        <div className="border-x-2 border-solid border-white px-4">
           <div className="h-12">
             <span className="font-extrabold">Thể loại</span>
           </div>
