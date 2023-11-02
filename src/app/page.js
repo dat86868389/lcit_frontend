@@ -1,5 +1,7 @@
-import dynamic from "next/dynamic";
-
+import News from "@/components/News";
+import TopPost from "../components/TopPost";
+import AboutUs from "@/components/AboutUs";
+import Banner from "@/components/Banner";
 
 async function getData() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -10,16 +12,19 @@ async function getData() {
 }
 
 export const metadata = {
-  title: 'Trang chủ',
-}
+  title: "Trang chủ",
+};
 
 export default async function Home() {
   const data = await getData();
   return (
     <>
-      <main className="pt-24">
-
-      </main>
+      <div className="container mx-auto">
+        <TopPost />
+        <News />
+        <AboutUs />
+        <Banner />
+      </div>
     </>
   );
 }

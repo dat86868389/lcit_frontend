@@ -8,7 +8,7 @@
   --color-header: #f4f4f4;
 }
 
-.border-color-blue{
+.border-color-blue {
   border-color: var(--color-primary-blue);
 }
 
@@ -29,7 +29,8 @@
   background-color: var(--color-primary-blue);
 }
 
-input:focus-visible, textarea:focus-visible {
+input:focus-visible,
+textarea:focus-visible {
   outline: none;
 }
 
@@ -40,6 +41,26 @@ input:focus-visible, textarea:focus-visible {
 .navlink:hover {
   color: white;
   cursor: pointer;
+}
+
+.top-post {
+  transition: all 0.3s;
+}
+
+.top-post .title {
+  transition: all 0.3s;
+}
+
+.top-post:hover .title {
+  text-decoration: underline;
+}
+
+.top-post img {
+  transition: all 0.4s;
+}
+
+.top-post:hover img {
+  transform: scale(1.1);
 }
 
 /* width */
@@ -54,10 +75,68 @@ input:focus-visible, textarea:focus-visible {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #585757;
+  background: #075985;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #075985;
+}
+
+.text-elipse-1 {
+  display: -webkit-box;
+  max-width: 200px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.text-elipse-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.text-elipse-3 {
+  display: -webkit-box;
+  max-width: 200px;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.balloon {
+  position: absolute;
+  top: -20px;
+  right: -40px;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 9999px;
+  z-index: 8;
+  animation: balloon_animation 3s infinite;
+}
+/* 
+@keyframes balloon_animation {
+  0%{
+   top: -10px;
+   right: -50px
+  }
+
+  25%{
+    transform: translate(-20px, -20px);
+  } 
+
+  100%{
+   top: -10px;
+   right: -50px
+  }
+} */
+
+.image-absl {
+  position: absolute;
+  top: -20px;
+  right: -40px;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 9999px;
+  z-index: 10;
 }
